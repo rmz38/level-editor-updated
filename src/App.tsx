@@ -390,7 +390,7 @@ const App : React.FC = ({}) => {
       capsules:rename('capsule',newJSON.capsules),
       diamonds:rename('diamond', newJSON.diamonds),
       rounds:rename('round',newJSON.rounds),
-      enemies:rename('enemies',newJSON.enemies),
+      enemies:rename('enemy',newJSON.enemies),
       spikes:rename('spike', newJSON.spikes),
       talls: rename('tall', newJSON.talls),
       pillars: rename('pillar', newJSON.pillars),
