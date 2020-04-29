@@ -14,8 +14,8 @@ let levelInit = {
   world: {
     gravity: -14.7,
     bounds: [32.0,18.0],
-    backgroundPres: 'present_background',
-    backgroundPast: 'past_background',
+    backgroundPres: 'present_background1',
+    backgroundPast: 'past_background1',
     diamondshape: [0.4, 1.8, 0.5, 1.8, 2.1, 1.8, 2.2, 1.8, 1.4, 0.1],
     capsuleshape: [0.4, 1.1, 0.5, 1.1, 2.6, 1.1, 2.7, 1.1, 2.6, 0.6, 2.0, 0.2, 1.1, 0.2, 0.5, 0.6],
     roundshape: [0.4, 1.4, 0.8, 1.7, 2.1, 1.7, 2.4, 1.4, 2.3, 0.8, 1.7, 0.3, 1.1, 0.3],
@@ -177,7 +177,7 @@ let levelInit = {
     turret1: {
       pos: [18.5,10.3],
       shrink: [0.0168, 0.021375],
-      texture: "turret_present",
+      texture: "present_turret",
       entitytype: "present",
       cooldown: 360,
       direction: [-3.0, 0.0],
@@ -187,7 +187,7 @@ let levelInit = {
     turret2: {
       pos: [8.5, 5.0],
       shrink: [0.0168, 0.021375],
-      texture: "turret_past",
+      texture: "past_turret",
       entitytype: "past",
       cooldown: 480,
       direction: [0.0, 2.0],
