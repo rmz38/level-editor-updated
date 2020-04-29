@@ -76,7 +76,7 @@ const AddButton: React.FC<Props> = ({ gameObjects, updateTurret, updateEnemy, up
   let densityStateEnemy = 1.0
   let bodytypeStateEnemy = 'dynamic'
   let entitytypeStateEnemy = 'present'
-  let cooldownStateEnemy = 120
+  let cooldownStateEnemy = 360
   let aitypeStateEnemy = 1
 
   //platform states 

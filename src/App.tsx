@@ -135,7 +135,7 @@ let levelInit = {
       texture: "enemypresent",
       entitytype: "present",
       aitype: 1,
-      cooldown: 120,
+      cooldown: 360,
       bodytype: "dynamic",
       density: 1.0
     },
@@ -145,7 +145,7 @@ let levelInit = {
       texture: "enemypast",
       aitype: 1,
       entitytype: "past",
-      cooldown: 120,
+      cooldown: 360,
       bodytype: "dynamic",
       density: 1.0
     }
