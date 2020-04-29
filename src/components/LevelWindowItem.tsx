@@ -28,6 +28,7 @@ const LevelWindowItem: React.FC<Props> = ({ texturePres, texturePast, idInput, p
   const [id, setId] = useState<string>(idInput);
   const [height, setHeight] = useState(90)
   const [width, setWidth] = useState(90)
+  const [hoverOpacity, setHoverOpacity] = useState(1)
   let trackX = 0;
   let trackY = 0;
   let temp: any;
@@ -39,6 +40,12 @@ const LevelWindowItem: React.FC<Props> = ({ texturePres, texturePast, idInput, p
   let transXRegex = /\.*translate\((.*?)px/i;
   let transYRegex = /\.*translate\(.*px,(.*?)px\)/i;
   let coords = { x1, x2, y1, y2 }
+  let imgStyle = {
+    width: width * scaleX,
+    height: height * scaleY + 'px',
+    transform: 'rotate(' + transAngle + 'deg)',
+    opacity: hoverOpacity
+  }
 
   return (
     // updatePosInput takes a list of the new position values (calculated by adding drag pos to current pos) and name of the component
@@ -54,13 +61,11 @@ const LevelWindowItem: React.FC<Props> = ({ texturePres, texturePast, idInput, p
           }}>
         <Tooltip title = {id} aria-label= {id}>
           <img
+            onMouseEnter ={() => setHoverOpacity(.5)}
+            onMouseLeave ={() => setHoverOpacity(1)}
             ref={el => temp = el}
             src={"./assets/" + texturePres + ".png"}
-            style={{
-              width: width * scaleX,
-              height: height * scaleY + 'px',
-              transform: 'rotate(' + transAngle + 'deg)'
-            }}
+            style = {imgStyle}
             onLoad={(e) => { setWidth(temp.naturalWidth); setHeight(temp.naturalHeight);}}
             alt={texturePres}
           >
