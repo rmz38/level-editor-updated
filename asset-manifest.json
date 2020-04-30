@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/level-editor-updated/static/css/main.3074bda4.chunk.css",
-    "main.js": "/level-editor-updated/static/js/main.9c9959d1.chunk.js",
-    "main.js.map": "/level-editor-updated/static/js/main.9c9959d1.chunk.js.map",
+    "main.js": "/level-editor-updated/static/js/main.31307176.chunk.js",
+    "main.js.map": "/level-editor-updated/static/js/main.31307176.chunk.js.map",
     "runtime-main.js": "/level-editor-updated/static/js/runtime-main.1679c74a.js",
     "runtime-main.js.map": "/level-editor-updated/static/js/runtime-main.1679c74a.js.map",
     "static/css/2.de424728.chunk.css": "/level-editor-updated/static/css/2.de424728.chunk.css",
     "static/js/2.f0d7d32d.chunk.js": "/level-editor-updated/static/js/2.f0d7d32d.chunk.js",
     "static/js/2.f0d7d32d.chunk.js.map": "/level-editor-updated/static/js/2.f0d7d32d.chunk.js.map",
     "index.html": "/level-editor-updated/index.html",
-    "precache-manifest.e1e9989685a440ed3116c8774e3c624e.js": "/level-editor-updated/precache-manifest.e1e9989685a440ed3116c8774e3c624e.js",
+    "precache-manifest.471967cc2075c33890e59d1e64f7b813.js": "/level-editor-updated/precache-manifest.471967cc2075c33890e59d1e64f7b813.js",
     "service-worker.js": "/level-editor-updated/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/level-editor-updated/static/css/2.de424728.chunk.css.map",
     "static/css/main.3074bda4.chunk.css.map": "/level-editor-updated/static/css/main.3074bda4.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.de424728.chunk.css",
     "static/js/2.f0d7d32d.chunk.js",
     "static/css/main.3074bda4.chunk.css",
-    "static/js/main.9c9959d1.chunk.js"
+    "static/js/main.31307176.chunk.js"
   ]
 }

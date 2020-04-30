@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0c482c446b06a46a8b5005fb2824b164",
+    "revision": "3c43fda9ffa18dd0be0059629fc510fc",
     "url": "/level-editor-updated/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/level-editor-updated/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "a143f7477279b726f536",
+    "revision": "7324db554069e562fbce",
     "url": "/level-editor-updated/static/css/main.3074bda4.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/level-editor-updated/static/js/2.f0d7d32d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a143f7477279b726f536",
-    "url": "/level-editor-updated/static/js/main.9c9959d1.chunk.js"
+    "revision": "7324db554069e562fbce",
+    "url": "/level-editor-updated/static/js/main.31307176.chunk.js"
   },
   {
     "revision": "84ed772555a435f51539",
