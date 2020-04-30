@@ -34,8 +34,10 @@ const LevelWindowItem: React.FC<Props> = ({ texturePres, texturePast, idInput, p
   let temp: any;
   let x1 = (typeof lineX1 !== undefined) ? lineX1 : 0
   let x2 = (typeof lineX2 !== undefined) ? lineX2 : 10
-  let y1 = (typeof lineY1 !== undefined) ? lineY1 : 0
-  let y2 = (typeof lineY2 !== undefined) ? lineY2 : 10
+  //@ts-ignore
+  let y1 = ((typeof lineY1 !== undefined) ? lineY1 : 0)
+  //@ts-ignore
+  let y2 = ((typeof lineY2 !== undefined) ? lineY2 : 10)
   let transAngle = (typeof angle !== undefined) ? angle : 0
   let transXRegex = /\.*translate\((.*?)px/i;
   let transYRegex = /\.*translate\(.*px,(.*?)px\)/i;
