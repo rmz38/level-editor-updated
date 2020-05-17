@@ -379,6 +379,7 @@ const ItemDashboard : React.FC<Props> = ({gameObjectsInput, update, selected, nu
     setGameObjects(newGameObjects)
   }
   let addPlatform = (newPlatform:any, id:string, type:string) => {
+    updateNumPlat(numPlat + 1)
     if( type === 'round'){
       updateRoundState(newPlatform, id +(numPlat + 1))
     } else if (type === 'diamond'){
@@ -391,6 +392,8 @@ const ItemDashboard : React.FC<Props> = ({gameObjectsInput, update, selected, nu
       updateTallState(newPlatform, id  + (numPlat + 1))
     } else if (type === 'pillar'){
       updatePillarState(newPlatform, id  + (numPlat + 1))
+    } else {
+      console.log('addPlatform broke')
     }
   }
   let updateNumPlat = (n:number) => {
@@ -447,22 +450,22 @@ const ItemDashboard : React.FC<Props> = ({gameObjectsInput, update, selected, nu
     components.push(<Turret world = {gameObjects.world} key = {key} info = {value} id = {key} update = {updateTurretState} selected = {selected}></Turret>);
   }
   for (let [key, value] of Object.entries(gameObjects.capsules)) {
-    components.push(<Capsule world = {gameObjects.world} key = {key + Math.random()} info = {value} id = {key} update = {updateCapsuleState} selected = {selected}></Capsule>);
+    components.push(<Capsule copy = {addPlatform} world = {gameObjects.world} key = {key + Math.random()} info = {value} id = {key} update = {updateCapsuleState} selected = {selected}></Capsule>);
   }
   for (let [key, value] of Object.entries(gameObjects.diamonds)) {
-    components.push(<Diamond world = {gameObjects.world} key = {key + Math.random()} info = {value} id = {key} update = {updateDiamondState} selected = {selected}></Diamond>);
+    components.push(<Diamond copy = {addPlatform} world = {gameObjects.world} key = {key + Math.random()} info = {value} id = {key} update = {updateDiamondState} selected = {selected}></Diamond>);
   }
   for (let [key, value] of Object.entries(gameObjects.rounds)) {
-    components.push(<Round world = {gameObjects.world} key = {key + Math.random()} info = {value} id = {key} update = {updateRoundState} selected = {selected}></Round>);
+    components.push(<Round copy = {addPlatform} world = {gameObjects.world} key = {key + Math.random()} info = {value} id = {key} update = {updateRoundState} selected = {selected}></Round>);
   }
   for (let [key, value] of Object.entries(gameObjects.longcapsules)) {
-    components.push(<Longcapsule world = {gameObjects.world} key = {key + Math.random()} info = {value} id = {key} update = {updateLongcapsuleState} selected = {selected}></Longcapsule>);
+    components.push(<Longcapsule copy = {addPlatform} world = {gameObjects.world} key = {key + Math.random()} info = {value} id = {key} update = {updateLongcapsuleState} selected = {selected}></Longcapsule>);
   }
   for (let [key, value] of Object.entries(gameObjects.talls)) {
-    components.push(<Tall world = {gameObjects.world} key = {key + Math.random()} info = {value} id = {key} update = {updateTallState} selected = {selected}></Tall>);
+    components.push(<Tall copy = {addPlatform} world = {gameObjects.world} key = {key + Math.random()} info = {value} id = {key} update = {updateTallState} selected = {selected}></Tall>);
   }
   for (let [key, value] of Object.entries(gameObjects.pillars)) {
-    components.push(<Pillar world = {gameObjects.world} key = {key + Math.random()} info = {value} id = {key} update = {updatePillarState} selected = {selected}></Pillar>);
+    components.push(<Pillar copy = {addPlatform} world = {gameObjects.world} key = {key + Math.random()} info = {value} id = {key} update = {updatePillarState} selected = {selected}></Pillar>);
   }
   for (let [key, value] of Object.entries(gameObjects.enemies)) {
     components.push(<Enemy world = {gameObjects.world} key = {key} info = {value} id = {key} update = {updateEnemyState} selected = {selected}></Enemy>);

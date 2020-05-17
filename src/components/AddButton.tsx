@@ -166,7 +166,6 @@ const AddButton: React.FC<Props> = ({ gameObjects, updateTurret, updateEnemy, up
       texture: time + "_" + platformType,
       space: spaceStatePlatform
     }
-    updateNumPlat(numPlat + 1)
     updatePlatform(newPlatform, newKey, platformType)
   }
 

@@ -81,7 +81,7 @@ const LevelWindowItem: React.FC<Props> = ({ texturePres, texturePast, idInput, p
         height: height * scaleY + 'px',
         position: 'absolute',
         left: (centered ? posInput[0] - width * scaleX / 3 : posInput[0] + width * scaleX / 3) + 'px',
-        bottom: posInput[1] + 20 + 'px'
+        bottom: posInput[1] - 20 + 'px'
       }}>
         <svg>
           <line {...coords} stroke="black" strokeWidth='2'></line>

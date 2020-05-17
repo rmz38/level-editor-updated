@@ -11,6 +11,7 @@ interface Props {
   id: string
   update: (data:any, i:string) => void
   selected: (compName:string, open:boolean) => void
+  copy: (data:any, i:string, t:string) => void
   world:any
   // isMenuOpenFn: (b:boolean) => boolean
   // isMenuOpen?: boolean
@@ -29,7 +30,7 @@ interface Props {
 //     "space": 1
 //   },
 
-const Diamond : React.FC<Props> = ({info, update, selected, id, world}) => {
+const Diamond : React.FC<Props> = ({info, update, selected, id, copy, world}) => {
 
   //update is a prop for updating in App the state, passes through ItemDashboard first
   const [isOpen, setIsOpen] = useState(false);
@@ -59,6 +60,14 @@ const Diamond : React.FC<Props> = ({info, update, selected, id, world}) => {
       space:spaceState
     }
   }
+  let time = (space:number) => {
+    if(space === 1){
+      return "present"
+    }else if(space === 2){
+      return "past"
+    }
+    return "both"
+  }
   const toggle = () => { //for toggling hiding the menu
     setIsOpen(!isOpen);
     selected('world', isOpen);
@@ -67,7 +76,8 @@ const Diamond : React.FC<Props> = ({info, update, selected, id, world}) => {
     <div >
       <ButtonGroup style = {{width: '100%'}}>
         <Button color="primary" onClick = {toggle} id="world" style={{ backgroundColor: '#6993f5', marginBottom: '1rem' }}>{id}</Button>
-        <Button color="danger" onClick = {() => update('delete', id)} id="delete" style={{ marginBottom: '1rem' }}>Delete</Button>
+        <Button color="success" onClick = {() => copy(updatedState(), time(spaceState) + "_diamond",'diamond')} style = {{marginBottom: '1rem'}}>Copy</Button>
+        <Button color="danger" onClick = {() => update('delete', id)} id="delete" style={{ marginBottom: '1rem' }}>X</Button>
       </ButtonGroup>
       <Collapse isOpened={isOpen}>
       <InputGroup>

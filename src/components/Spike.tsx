@@ -56,6 +56,7 @@ const Spike : React.FC<Props> = ({info, update, selected, id, world}) => {
     <div >
       <ButtonGroup style = {{width: '100%'}}>
         <Button color="primary" onClick = {toggle} id="spike" style={{ backgroundColor: '#1aa7e8', marginBottom: '1rem' }}>{id}</Button>
+        <Button color="success" onClick = {() => update(updatedState(), 'spike')} style = {{marginBottom: '1rem'}}>Copy</Button>
         <Button color="danger" onClick = {() => update('delete', id)} id="delete" style={{ marginBottom: '1rem' }}>X</Button>
       </ButtonGroup>
       <Collapse isOpened={isOpen}>
