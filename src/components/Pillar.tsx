@@ -42,7 +42,7 @@ const Pillar : React.FC<Props> = ({info, update, selected, id, copy, world}) => 
       bodytype:bodytypeState,
       density:densityState,
       friction:frictionState,
-      resitution:restitutionState,
+      restitution:restitutionState,
       texture:textureState,
       space:spaceState
     }
